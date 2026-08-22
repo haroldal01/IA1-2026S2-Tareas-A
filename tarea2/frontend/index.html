@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Declara HTML5 para que el navegador use el estándar actual. -->
+<html lang="es">
+  <head>
+    <!-- Define la codificación para mostrar correctamente el texto en español. -->
+    <meta charset="utf-8" />
+    <!-- Permite que el documento se adapte a pantallas pequeñas. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Identifica la aplicación en la pestaña del navegador. -->
+    <title>Inventario RPG</title>
+  </head>
+  <body>
+    <!-- Encabezado básico de la aplicación sin estilos personalizados. -->
+    <h1>Inventario RPG</h1>
+    <!-- Explica brevemente la operación disponible. -->
+    <p>Busca un ítem del inventario usando Prolog, PySwip y una API REST.</p>
+
+    <!-- Formulario que JavaScript enviará al endpoint GET del backend. -->
+    <form id="inventory-form">
+      <!-- Etiqueta asociada al campo de entrada para accesibilidad. -->
+      <label for="item-input">Ítem buscado:</label>
+      <!-- Campo de texto que contiene el parámetro enviado a la API. -->
+      <input
+        id="item-input"
+        name="item"
+        type="text"
+        placeholder="pocion_roja"
+        autocomplete="off"
+        required
+      />
+      <!-- Botón que inicia la petición fetch. -->
+      <button id="submit-button" type="submit">Buscar</button>
+    </form>
+
+    <!-- Mensaje actualizado por JavaScript con el estado de la consulta. -->
+    <p id="status-message" role="status" aria-live="polite">Listo para recibir una consulta.</p>
+
+    <!-- Zona de resultados actualizada dinámicamente desde el JSON recibido. -->
+    <section id="results" aria-labelledby="results-title" aria-live="polite">
+      <!-- Título de la sección de resultados. -->
+      <h2 id="results-title">Resultados</h2>
+      <!-- Muestra el texto que fue aceptado por el backend. -->
+      <p>Ítem consultado: <span id="queried-item">sin consulta</span></p>
+      <!-- Muestra TotalItems unificado por length/2 en Prolog. -->
+      <p>Total de ítems: <strong id="total-items">--</strong></p>
+
+      <!-- Muestra InventarioInvertido generado con reverse/2. -->
+      <h3>Inventario invertido (reverse/2)</h3>
+      <ul id="reversed-list">
+        <li>Los resultados aparecerán aquí.</li>
+      </ul>
+
+      <!-- Muestra InventarioUnico generado con sort/2. -->
+      <h3>Inventario único (sort/2, sin duplicados)</h3>
+      <ul id="unique-list">
+        <li>Los resultados aparecerán aquí.</li>
+      </ul>
+
+      <!-- Muestra InventarioOrdenado generado con msort/2. -->
+      <h3>Inventario ordenado (msort/2, conserva duplicados)</h3>
+      <ul id="sorted-list">
+        <li>Los resultados aparecerán aquí.</li>
+      </ul>
+    </section>
+
+    <!-- Carga la lógica de interacción después de construir el documento. -->
+    <script src="/app.js" defer></script>
+  </body>
+</html>

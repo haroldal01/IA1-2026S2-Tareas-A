@@ -1,0 +1,10 @@
+# Ignora cachés generadas por Python.
+__pycache__/
+*.py[cod]
+
+# Ignora entornos virtuales locales y archivos de configuración privados.
+.venv/
+.env
+
+# Conserva las capturas y documentación, pero no los temporales del lector PDF.
+tmp/

@@ -1,0 +1,2 @@
+# PySwip conecta Python con el motor SWI-Prolog instalado en el sistema.
+pyswip==0.3.3

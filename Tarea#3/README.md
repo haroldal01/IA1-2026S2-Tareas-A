@@ -7,7 +7,11 @@ Bot desarrollado en Python usando la API HTTP oficial de Telegram y ofrece un me
 | Integrante | Carné | Parte realizada |
 | --- | --- | --- |
 | Harold Sánchez | 202200100 | Configuración y despliegue |
-| Nombre y apellido | Carné | Comandos y validaciones |
+| Kevin Pozuelos | 201800992 | Comandos y validaciones |
+| Emilio Rivera  | 202004712 | Comandos básicos e información del bot |
+| Angel Arreaga  | 202004762 | Operaciones matemáticas |
+| Segio Sandoval | 202010298 | Conversión de unidades y números aleatorios |
+| Juan Gerardi   | 201900532 | Menú interactivo y documentación |
 
 ## Requisitos
 

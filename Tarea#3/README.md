@@ -29,7 +29,7 @@ Desde esta carpeta:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pytohn3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 cp .env.example .env
 ```
 
@@ -65,3 +65,6 @@ formato, unidades, división entre cero y rangos invertidos. Un comando
 desconocido o un mensaje que no sea comando recibe un error sin detener el
 proceso.
 
+# Link del bot
+
+https://t.me/tarea3_ia_bot
